@@ -32,7 +32,7 @@ xsi:noNamespaceSchemaLocation="weewx.xsd">
     <heatindex>$current.heatindex</heatindex>
     <dewpoint>$current.dewpoint</dewpoint>
 		<barometer trend="$trend.barometer">$current.barometer</barometer>
-		<wind winddir="$current.windDir" compass="$current.windDir.ordinal_compass">$current.windSpeed</wind>
+		<wind winddir="$current.windDir" compass="$current.windDir.ordinal_compass" windgust="$current.windGust">$current.windSpeed</wind>
 		<rainRate>$current.rainRate</rainRate> 
 		<inTemp>$current.inTemp</inTemp>
 		#if $day.extraTemp1.has_data
