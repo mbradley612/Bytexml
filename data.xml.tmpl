@@ -27,11 +27,18 @@ xsi:noNamespaceSchemaLocation="weewx.xsd">
 	
   <current>
     <dateTime>$current.dateTime</dateTime>
-    <outTemp>$current.outTemp</outTemp>
+    <outTemp>$current.outTemp.nolabel("%d","N/A")</outTemp>
     <windchill>$current.windchill</windchill>
     <heatindex>$current.heatindex</heatindex>
     <dewpoint>$current.dewpoint</dewpoint>
 		<barometer trend="$trend.barometer">$current.barometer</barometer>
+    <windspeed>$current.windSpeed.nolabel("%d","N/A")</windspeed>
+    <windgust>$current.windGust.nolabel("%d","N/A")</windgust>
+    <windCompass>$current.windDir.ordinal_compass</windCompass>
+    <windUnit>$unit.label.windSpeed</windUnit>
+    <pressure>$current.barometer.nolabel("%d","N/A")</pressure>
+    <pressureUnit>$unit.label.barometer</pressureUnit>
+    <tempUnit>$unit.label.outTemp</tempUnit>
 		<wind winddir="$current.windDir" compass="$current.windDir.ordinal_compass" windgust="$current.windGust">$current.windSpeed</wind>
 		<rainRate>$current.rainRate</rainRate> 
 		<inTemp>$current.inTemp</inTemp>
