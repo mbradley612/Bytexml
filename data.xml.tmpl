@@ -8,14 +8,6 @@ xsi:noNamespaceSchemaLocation="weewx.xsd">
 	<uptime>$station.uptime</uptime>
 	<weewxtime>$station.os_uptime</weewxtime>
 	
-	<extras>
-	#if $Extras.has_key('radar_url')
-		<radarurl>'$Extras.radar_url'</radarurl>
-	#end if
-	#if $Extras.has_key('radar_img')
-		<radarimg>'$Extras.radar_img'</radarimg>
-	#end if
-	</extras>
 	
   <station>
 		<hardware>$station.hardware</hardware>
